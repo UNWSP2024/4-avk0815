@@ -8,13 +8,25 @@
 def main():
     budget = 0.0
     difference = 0.0
-    spent = 1.0         #initialize for while loop
+    spent = 1.0         # initialize for while loop
     total = 0.0
+################################################
+    budget = float(input("Enter your budget for the month: $"))
 
-    ######################
-    # WRITE YOUR CODE HERE
-    ######################
+    while spent != 0:
+        spent = float(input("Enter an expense (or 0 to finish): $"))
+        total += spent
 
+    difference = budget - total
+    print(f"Budget: ${budget:.2f}")
+    print(f"Total expenses: ${total:.2f}")
+    if difference > 0:
+        print(f"You are under budget by ${difference:.2f}")
+    elif difference < 0:
+        print(f"You are over budget by ${abs(difference):.2f}")
+    else:
+        print("You are exactly on budget! :D")
+##################################################################
 
 if __name__ == '__main__':
     main()

@@ -6,7 +6,15 @@
 
 def main():
     ######################
-    # WRITE YOUR CODE HERE
+    total_tickets = 0
+    while True:
+        movie_name = input("Enter the name of the movie (or 'done' to finish): ")
+        if movie_name.lower() == 'done':
+            break
+
+        tickets = int(input(f"How many tickets do you want for '{movie_name}'? "))
+        total_tickets += tickets
+    print(f"Total number of tickets desired: {total_tickets}")
     ######################
 
 
